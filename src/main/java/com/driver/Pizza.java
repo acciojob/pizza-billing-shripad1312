@@ -52,37 +52,41 @@ public class Pizza {
 
     public void addTakeaway(){
         // your code goes here
-        this.sum+=20;
-        istakeaway=true;
+        if(istakeaway==false){
+            this.sum+=20;
+            istakeaway=true;
+        }
+
+
     }
 
     public String getBill(){
         // your code goes here
 
         if(this.isVeg==true){
-            System.out.println("Base Price Of The Pizza: 300\n");
+            System.out.println("Base Price Of The Pizza: 300");
         }else{
-            System.out.println("Base Price Of The Pizza: 400\n");
+            System.out.println("Base Price Of The Pizza: 400");
         }
 
         if(this.ischeeseadded==true){
-            System.out.println("Extra Cheese Added: 80\n");
+            System.out.println("Extra Cheese Added: 80");
         }
 
         if(this.istopingsadded==true){
             if(this.isVeg==true){
-                System.out.println("Extra Toppings Added: 70\n");
+                System.out.println("Extra Toppings Added: 70");
             }  else{
-                System.out.println("Extra Toppings Added: 120\n");
+                System.out.println("Extra Toppings Added: 120");
             }
         }
 
         if(istakeaway==true){
 
-            System.out.println("Paperbag Added: 20\n");
+            System.out.println("Paperbag Added: 20");
         }
 
-        System.out.println("Total Price:"+sum+"\n");
+        System.out.println("Total Price:"+sum);
 
         this.bill+=sum;
         return this.bill;
