@@ -64,26 +64,26 @@ public class Pizza {
         // your code goes here
 
         if(this.isVeg==true){
-            System.out.println("Base Price Of The Pizza: 300");
+            System.out.println("Base Price Of The Pizza: 300\\");
         }else{
-            System.out.println("Base Price Of The Pizza: 400");
+            System.out.println("Base Price Of The Pizza: 400\\");
         }
 
         if(this.ischeeseadded==true){
-            System.out.println("Extra Cheese Added: 80");
+            System.out.println("Extra Cheese Added: 80\\");
         }
 
         if(this.istopingsadded==true){
             if(this.isVeg==true){
-                System.out.println("Extra Toppings Added: 70");
+                System.out.println("Extra Toppings Added: 70\\");
             }  else{
-                System.out.println("Extra Toppings Added: 120");
+                System.out.println("Extra Toppings Added: 120\\");
             }
         }
 
         if(istakeaway==true){
 
-            System.out.println("Paperbag Added: 20");
+            System.out.println("Paperbag Added: 20\\");
         }
 
         System.out.println("Total Price:"+sum);
