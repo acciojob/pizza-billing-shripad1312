@@ -9,6 +9,7 @@ public class Pizza {
     private boolean ischeeseadded=false;
     private boolean istopingsadded=false;
     private boolean istakeaway=false;
+    private boolean isbill;
 
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
@@ -63,32 +64,37 @@ public class Pizza {
     public String getBill(){
         // your code goes here
 
-        if(this.isVeg==true){
-            System.out.println("Base Price Of The Pizza: 300\\");
-        }else{
-            System.out.println("Base Price Of The Pizza: 400\\");
-        }
-
-        if(this.ischeeseadded==true){
-            System.out.println("Extra Cheese Added: 80\\");
-        }
-
-        if(this.istopingsadded==true){
+        if(isbill==false){
             if(this.isVeg==true){
-                System.out.println("Extra Toppings Added: 70\\");
-            }  else{
-                System.out.println("Extra Toppings Added: 120\\");
+                System.out.println("Base Price Of The Pizza: 300");
+            }else{
+                System.out.println("Base Price Of The Pizza: 400");
             }
+
+            if(this.ischeeseadded==true){
+                System.out.println("Extra Cheese Added: 80");
+            }
+
+            if(this.istopingsadded==true){
+                if(this.isVeg==true){
+                    System.out.println("Extra Toppings Added: 70");
+                }  else{
+                    System.out.println("Extra Toppings Added: 120");
+                }
+            }
+
+            if(istakeaway==true){
+
+                System.out.println("Paperbag Added: 20");
+            }
+
+            System.out.println("Total Price:"+sum);
+
+            this.bill+=sum;
+            isbill=true;
         }
 
-        if(istakeaway==true){
 
-            System.out.println("Paperbag Added: 20\\");
-        }
-
-        System.out.println("Total Price:"+sum);
-
-        this.bill+=sum;
         return this.bill;
     }
 }
