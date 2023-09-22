@@ -21,6 +21,8 @@ public class Pizza {
             this.price=400;
             this.sum+=400;
         }
+
+        this.bill="";
     }
 
     public int getPrice(){
@@ -66,38 +68,38 @@ public class Pizza {
 
         if(isbill==false){
             if(this.isVeg==true){
-                //System.out.println();
+
                 this.bill=this.bill+"Base Price Of The Pizza: "+this.price+"\n";
             }else{
-              //  System.out.println("Base Price Of The Pizza: "+this.price);
+
                 this.bill+="Base Price Of The Pizza: "+this.price+"\n";
             }
 
             if(this.ischeeseadded==true){
                 this.bill+="Extra Cheese Added: 80"+"\n";
-               // System.out.println();
+
             }
 
             if(this.istopingsadded==true){
                 if(this.isVeg==true){
-                   // System.out.println("Extra Toppings Added: 70");
+
                    this.bill+="Extra Toppings Added: 70"+"\n";
                 }  else{
-                   // System.out.println("Extra Toppings Added: 120");
+
                     this.bill+="Extra Toppings Added: 120"+"\n";
                 }
             }
 
             if(istakeaway==true){
 
-//                System.out.println("Paperbag Added: 20");
+
                 this.bill+="Paperbag Added: 20"+"\n";
             }
 
-          //  System.out.println("Total Price: "+sum);
+
             this.bill+="Total Price: "+sum+"\n";
 
-           // this.bill+=sum;
+
             isbill=true;
         }
 
